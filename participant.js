@@ -10,6 +10,8 @@ class Participant {
     this.email = opts.email
 
     this.id = uuidv4()
+
+    this.score = 0
   }
 }
 
