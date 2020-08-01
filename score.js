@@ -13,6 +13,11 @@ class Scoreboard {
       console.error('Only accepts participants of the Participant class')
     }
   }
+
+  update() {
+    this.participants.sort((p, q) => q.score - p.score)
+    return this.participants
+  }
 }
 
 module.exports = Scoreboard
