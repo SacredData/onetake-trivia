@@ -1,7 +1,7 @@
 const { v4: uuidv4  } = require('uuid')
 
 class Participant {
-  constructor(opts) {
+  constructor(opts={}) {
     if (!opts.name || !opts.email) {
       return new Error('opts must include name and email')
     }
