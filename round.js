@@ -1,3 +1,5 @@
+const { v4: uuidv4   } = require('uuid')
+
 class Round {
   constructor(opts={}) {
     this.questions = []
@@ -23,6 +25,7 @@ class Question {
     if (!opts.text || !opts.seconds) {
       throw new Error('opts.text and opts.seconds must be provided')
     }
+    this.id = uuidv4()
     this.text = opts.text
     this.seconds = opts.seconds
 
