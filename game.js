@@ -11,8 +11,10 @@ class Game {
   }
 
   attachScoreboard(scoreboard) {
-    if (scoreboard instanceof Scoreboard) {
+    if (this.scoreboard === null && scoreboard instanceof Scoreboard) {
       this.scoreboard = scoreboard
+    } else {
+      console.error('scoreboard already attached')
     }
   }
 
