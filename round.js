@@ -1,24 +1,37 @@
 class Round {
   constructor(opts={}) {
-    this.points = opts.points ? Number(opts.points) : 1
+    this.questions = []
 
     if (opts.order) {
       this.order = opts.order
     }
   }
+
+  addQuestion(question) {
+    if (question instanceof Array) {
+      if (question.every(q => q instanceof Question)) {
+        this.questions.push(...question)
+      }
+    } else if (question instanceof Question) {
+      this.questions.push(question)
+    }
+  }
 }
 
-class Question extends Round {
+class Question {
   constructor(opts={}) {
-    super(opts)
-    this.type = 'question'
-
     if (!opts.text || !opts.seconds) {
       throw new Error('opts.text and opts.seconds must be provided')
     }
-
     this.text = opts.text
     this.seconds = opts.seconds
+
+    this.points = opts.points ? Number(opts.points) : 1
+
+    if (opts.order) {
+      this.order = Number(opts.order)
+    }
+
   }
 }
 
