@@ -9,6 +9,8 @@ class Scoreboard {
   addParticipant(participant) {
     if (participant instanceof Participant) {
       this.participants.push(participant)
+    } else {
+      console.error('Only accepts participants of the Participant class')
     }
   }
 }
