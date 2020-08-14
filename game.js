@@ -8,6 +8,8 @@ class Game {
     this.rounds = []
 
     this.opts = opts
+
+    this.roundTime = 0 // Total approx. seconds of the game
   }
 
   attachScoreboard(scoreboard) {
