@@ -1,0 +1,24 @@
+{
+  "name": "onetake-trivia",
+  "version": "0.0.1",
+  "description": "Live, online low-latency trivia night using [AWS IVS](https://aws.amazon.com/ivs/) and Node.js!",
+  "main": "game.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SacredData/onetake-trivia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SacredData/onetake-trivia/issues"
+  },
+  "homepage": "https://github.com/SacredData/onetake-trivia#readme"
+}
